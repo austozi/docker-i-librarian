@@ -11,5 +11,5 @@ services:
     volumes:
       - ./config:/config
       - ./data:/i-librarian/data
-    expose:
-      - 80
+    ports:
+      - 9091:80
