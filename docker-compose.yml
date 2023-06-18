@@ -1,0 +1,15 @@
+version: "2.4"
+services:
+  i-librarian:
+    image: austozi/i-librarian:latest
+    container_name: i-librarian
+    restart: unless-stopped
+    environment:
+      PUID: 1000
+      GUID: 1000
+      TZ: Europe/London
+    volumes:
+      - ./config:/config
+      - ./data:/i-librarian/data
+    expose:
+      - 80
